@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/index.css">    
+    <title>CSS TOOLS</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__logo">
+            <h3>CSS TOOLS</h3>
+        </div>
+        <div class="header__menu">
+            <span>Tools List</span>
+            <i class="material-icons">menu</i>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="main__cta">
+            <div class="main__text">
+                <h1 class="main__animate-text">FREE SERVICES TO MAKE YOU CODE FASTER!</h1>
+                <h3 class="main__animate-text">80% of your hard work can be done with 20% of effort.
+                    That’s why we’re here!
+                </h3>
+            </div>
+            <div class="main__buttons">
+                <a href="#" class="basic--button main__primary_button main__animate-button">BORDER RADIUS GENERATOR</a>
+                <a href="#" class="basic--button main__secondary_button main__animate-button">MORE TOOLS</a>
+            </div>
+        </div>
+        <div class="main__image">
+            <img src="./images/landing.svg" alt="landing page image">
+        </div>
+    </main>
+    <section class="showcase">
+        <div class="showcase__merchant animate--first">
+            <div class="showcase__text">
+                <h2>Many features for faster development.</h2>
+                <h3>Free content, always!</h3>
+            </div>
+            <div class="showcase__image">
+                <img src="./images/skate.svg" alt="skating page image">
+            </div>
+        </div>
+        <div class="showcase__merchant animate--second">
+            <div class="showcase__image">
+                <img src="./images/happy.svg" alt="skating page image">
+            </div>
+            <div class="showcase__text">
+                <h2>Try it now, it is easy.</h2>
+                <h3>Check out the Box Shadow Generator.</h3>
+                <a href="#" class="basic--button main__primary_button">BOX SHADOW GENERATOR</a>
+            </div>
+        </div>
+        <div class="showcase__merchant animate--third">
+            <div class="showcase__text">
+                <h2>Check all tools.</h2>
+                <a href="#" class="basic--button main__secondary_button">MORE TOOLS</a>
+            </div>
+            <div class="showcase__image">
+                <img src="./images/proud.svg" alt="skating page image">
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Contact</a>
+        </div>
+        <span class="footer__logo">CSS TOOLS</span>
+
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+
+    <script>
+
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.from('.main__animate-text', {
+            scrollTrigger: ".main__animate-text",
+            opacity: 0,
+            duration: 1,
+            y: -50,
+            delay: 1,
+            stagger: 0.5
+        });
+        gsap.from('.main__animate-button', {
+            scrollTrigger: ".main__animate-button",
+            opacity: 0,
+            duration: 1,
+            x: -50,
+            delay: 2,
+            stagger: 0.5
+        });
+        gsap.from('.animate--first', {
+            scrollTrigger: ".animate--first",
+            opacity: 0, duration: 1,
+            x: -100,
+            delay: .5
+        });
+        gsap.from('.animate--second', {
+            scrollTrigger: ".animate--second",
+            opacity: 0,
+            duration: 1,
+            x: 100,
+            delay: .5
+        });
+        gsap.from('.animate--third', {
+            scrollTrigger: ".animate--third",
+            opacity: 0,
+            duration: 1,
+            x: -100,
+            delay: .5
+        });
+
+    </script>
+</body>
+</html>
