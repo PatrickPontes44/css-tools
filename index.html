@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/global.css">
     <link rel="stylesheet" href="./styles/index.css">    
     <title>CSS TOOLS</title>
 </head>
@@ -31,7 +32,7 @@
                 <a href="#" class="basic--button main__secondary_button main__animate-button">MORE TOOLS</a>
             </div>
         </div>
-        <div class="main__image">
+        <div class="main__image main__animate-image">
             <img src="./images/landing.svg" alt="landing page image">
         </div>
     </main>
@@ -77,47 +78,6 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
-
-    <script>
-
-        gsap.registerPlugin(ScrollTrigger);
-        gsap.to('.main__animate-text', {
-            scrollTrigger: ".main__animate-text",
-            opacity: 1,
-            duration: 1,
-            y: 0,
-            delay: 1,
-            stagger: 0.5
-        });
-        gsap.to('.main__animate-button', {
-            scrollTrigger: ".main__animate-button",
-            opacity: 1,
-            duration: 1,
-            x: 0,
-            delay: 2,
-            stagger: 0.5
-        });
-        gsap.from('.animate--first', {
-            scrollTrigger: ".animate--first",
-            opacity: 0, duration: 1,
-            x: -100,
-            delay: .5
-        });
-        gsap.from('.animate--second', {
-            scrollTrigger: ".animate--second",
-            opacity: 0,
-            duration: 1,
-            x: 100,
-            delay: .5
-        });
-        gsap.from('.animate--third', {
-            scrollTrigger: ".animate--third",
-            opacity: 0,
-            duration: 1,
-            x: -100,
-            delay: .5
-        });
-
-    </script>
+    <script src="./js/animations.js"></script>
 </body>
 </html>
