@@ -81,19 +81,19 @@
     <script>
 
         gsap.registerPlugin(ScrollTrigger);
-        gsap.from('.main__animate-text', {
+        gsap.to('.main__animate-text', {
             scrollTrigger: ".main__animate-text",
-            opacity: 0,
+            opacity: 1,
             duration: 1,
-            y: -50,
+            y: 0,
             delay: 1,
             stagger: 0.5
         });
-        gsap.from('.main__animate-button', {
+        gsap.to('.main__animate-button', {
             scrollTrigger: ".main__animate-button",
-            opacity: 0,
+            opacity: 1,
             duration: 1,
-            x: -50,
+            x: 0,
             delay: 2,
             stagger: 0.5
         });

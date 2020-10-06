@@ -127,6 +127,11 @@ img{
     color: var(--secondary-light-color-opacity);
 }
 
+.main__animate-text{
+    opacity: 0;
+    transform: translateY(-40px);
+}
+
 .main__cta .main__buttons{
     display: flex;
     flex-direction: column;
@@ -151,6 +156,11 @@ img{
 .main__secondary_button:focus{
     background-color: var(--primary-color);
     border: 2px solid transparent;
+}
+
+.main__animate-button{
+    opacity: 0;
+    transform: translateX(-50px);
 }
 
 .main__image{
