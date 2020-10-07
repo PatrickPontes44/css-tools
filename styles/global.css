@@ -11,6 +11,8 @@
     --gradient-color2: #29112C;
     --transition: linear .2s;
     --horizontalPadding: 6em;
+    --max-width: 1100px;
+    --box-shadow: 0px 0px 5px 0 rgba(0,0,0,0.6);
 }
 
 *, *::before, *::after{
@@ -54,6 +56,10 @@ img{
     height: 100%;
     object-fit: contain;
 }
+p{
+    font-size: clamp(14px, 2vw, 16px);
+    letter-spacing: .05em;
+}
 
 .basic--button{
     font-size: clamp(14px, 2vw, 20px);
@@ -95,6 +101,15 @@ img{
     color: var(--primary-color);
 }
 
+.sidemenu{
+    position: absolute;
+    top: 10%;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    z-index: 999;
+}
 
 .footer{
     width: 100%;
@@ -105,7 +120,7 @@ img{
     align-items: center;
     justify-content: space-between;
     margin-top: 2em;
-    font-size: 1.2em;
+    font-size: 1em;
 }
 .footer__links{
     display: flex;
@@ -122,11 +137,23 @@ img{
     color: var(--primary-color-focus);
 }
 
+.footer__social{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    gap: 1em;
+}
+
 .footer__logo{
     /* font-size: 1.2em; */
     color: var(--secondary-light-color);
     font-weight: bold;
     pointer-events: none;
+}
+.footer__github{
+    width: 30px;
+    height: 100%;
 }
 
 
