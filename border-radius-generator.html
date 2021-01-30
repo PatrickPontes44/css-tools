@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/global.css">
+    <link rel="stylesheet" href="./styles/border-radius-generator.css">    
+    <title>Border Radius Generator - CSS TOOLS</title>
+</head>
+<body>
+    <div class="sidemenu">
+        <ul>
+            <li>
+                <a href="https://css-tools.com/" title="Home">Home</a>
+            </li>
+            <li>
+                <a href="border-radius-generator" title="Border Radius Generator" class="active">Border Radius Generator</a>
+            </li>
+            <li>
+                <a href="box-shadow-generator" title="Box Shadow Generator">Box Shadow Generator</a>
+            </li>
+            <li>
+                <a href="text-shadow-generator" title="Text Shadow Generator">Text Shadow Generator</a>
+            </li>
+            <li>
+                <a href="privacy-policy" title="privacy policies">Privacy Policy</a>
+            </li>
+        </ul>
+    </div>
+    <header class="header">
+        <div class="header__logo">
+            <h3 onclick="goToHome()">CSS TOOLS</h3>
+        </div>
+        <div class="header__menu">
+            <span>Tools List</span>
+            <i class="material-icons">menu</i>
+        </div>
+    </header>
+
+    <main class="main">
+        <h1>Border Radius Generator</h1>
+        <div class="border-radius-generator-container">
+            <div class="app-container">
+                <div class="modify-component"></div>
+                <div class="output">
+                    <input type="text" id="output-display" value="0% 0% 0% 0% / 0% 0% 0% 0%" disabled></input>
+                    <button class="btn" onclick="copyClipboard()">Copy</button>
+                </div>
+            </div>
+
+            <div class="sliders">
+                <span>Top-left / Top-right</span>
+                <input type="range" min="0" max="100" value="0" id="slider-top" class="slider" oninput="moveTop(event)">
+                <span>Right-top / Right-Bottom</span>
+                <input type="range" min="0" max="100" value="0" id="slider-right" class="slider" oninput="moveRight(event)">
+                <span>Bottom-left / Bottom-right</span>
+                <input type="range" min="0" max="100" value="0" id="slider-bottom" class="slider" oninput="moveBottom(event)">
+                <span>Left-top / Left-bottom</span>
+                <input type="range" min="0" max="100" value="0" id="slider-left" class="slider" oninput="moveLeft(event)">
+            </div>
+        </div>
+    </main>
+
+    <section class="about-feature-section">
+        <div class="content">
+            <div class="feature-title">
+                <h2 class="feature__header">What is the CSS Border Radius Property and How to Use It?</h2>
+                <p><strong>Border-radius</strong> is a CSS property that allows you to define how round the vertices of an element will be. 
+                    Rounding is done by changing the value of the vertices of an element. 
+                    You can do this by changing 4 values, <strong> top-left, top-right, bottom-left, bottom-right</strong>,
+                 or defining a single value for all 4 previous examples, using the short form.
+                </p>
+            </div>
+
+            <div class="examples">
+                <h3 class="examples__header">Examples</h3>
+                <div class="example">
+                    <p>
+                        <span class="ex-property">border-top-left-radius</span>: 10px;
+                    </p>
+                    <p>
+                        <span class="ex-property">border-top-right-radius</span>: 10px;
+                    </p>
+                    <p>
+                        <span class="ex-property">border-bottom-left-radius</span>: 10px;
+                    </p>
+                    <p>
+                        <span class="ex-property">border-bottom-left-radius</span>: 10px;
+                    </p>
+                    <span class="ex-comment">/* or */</span>
+                    <p>
+                        <span class="ex-property">border-radius</span>: 10px 10px 10px 10px;
+                    </p>
+                    <span class="ex-comment">/* the result will be a rectangle with a border-radius of 10px on each side. */</span>
+                    <div class="ex-div1"></div>
+                    <span class="ex-comment">/* or just */</span>
+                    <p>
+                        <span class="ex-property">border-radius</span>: 30px;
+                    </p>
+                    <span class="ex-comment">/* the result will be a rectangle with a border-radius of 30px on each side. */</span>
+                    <div class="ex-div2"></div>
+                    <span class="ex-comment">/* you can also use percent values with this property */</span>
+                    <p>
+                        <span class="ex-property">border-radius</span>: 50%;
+                    </p>
+                    <div class="ex-div3"></div>
+                    <span class="ex-comment">/* all corners will be round and you will end with a perfect circle if the element started as a square, or an ellipse if it started as a rectangle. */</span>
+                    <p>
+                        <span class="ex-property">border-radius</span>: 61% 39% 80% 20% / 100% 0% 100% 0%;
+                    </p>
+                    <div class="ex-div4"></div>
+                    <span class="ex-comment">/* this way you can even generate shapes like this one: */</span>
+    
+                    <p class="reference">For more examples and better understanding please visit: <br>
+                        <a href="https://www.w3schools.com/cssref/css3_pr_border-radius.asp">W3Schools CSS3 Border-Radius</a> <br>
+                        <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/border-radius">MDN Border-Radius</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__links">
+            <a href="privacy-policy">Privacy Policy</a>
+        </div>
+        <div class="footer__social">
+            <a href="https://github.com/PatrickPontes44" target="_blank" class="footer__github"><img src="./images/github.svg" alt="github button"></a>
+            <span class="footer__logo">CSS TOOLS</span>
+        </div>
+
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+    <script src="./js/events.js"></script>
+    <script src="./js/border-radius.js"></script>
+</body>
+</html>

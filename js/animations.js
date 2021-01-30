@@ -31,12 +31,12 @@ gsap.from('.animate--second', {
     opacity: 0,
     duration: 1,
     x: 100,
-    delay: .5
+    delay: 1
 });
 gsap.from('.animate--third', {
     scrollTrigger: ".animate--third",
     opacity: 0,
     duration: 1,
     x: -100,
-    delay: .5
+    delay: 1
 });

@@ -39,7 +39,7 @@
     flex-direction: column;
     gap: 1em;
     justify-content: flex-start;
-    align-items: flex-start;
+    /* align-items: flex-start; */
 }
 
 .main__primary_button{

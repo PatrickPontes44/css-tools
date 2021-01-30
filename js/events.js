@@ -6,8 +6,8 @@ tl.to(
     }
 );
 tl.to(
-    '.sidemenu', 0.4,{
-        width: "30%",
+    '.sidemenu', 0.5,{
+        width: "40%",
         ease: Power1.easeInOut
     }
 )
@@ -22,4 +22,8 @@ document.querySelector(".header__menu").addEventListener("click", (e)=>{
 
 function toggleTween(tween){
     tween.reversed() ? tween.play() : tween.reverse();
+}
+
+function goToHome(){
+    window.open('/', '_self')
 }

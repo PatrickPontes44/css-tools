@@ -3,20 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-Tools - The Best Online CSS Generator</title>
+    <meta name="application-name" content="CSS Tools">
+    <meta name="theme-color" content="#7c3691">
+    <meta name="description" content="Free CSS tools to generate and preview CSS and JavaScript content, such as CSS Border-radius and CSS Box-shadow.">
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="google" content="nositelinkssearchbox">
+    <meta name="subject" content="CSS based tools designed to help newbies web developers.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="CSS Tools">
+    <meta property="og:description" content="Free CSS tools to generate and preview CSS and JavaScript content, such as CSS Border-radius and CSS Box-shadow.">
+    <meta property="og:site_name" content="CSS Tools">
+    <meta property="og:locale" content="en_US">
+    <meta property="article:author" content="Patrick Pontes">
+    <meta name="twitter:card" content="Free tools to generate and preview CSS and JavaScript content, such as CSS Border-radius and CSS Box-shadow.">
+    <meta name="twitter:url" content="https://css-tools.com">
+    <meta name="twitter:title" content="CSS Tools">
+    <meta name="twitter:description" content="Free tools to generate and preview CSS and JavaScript content, such as CSS Border-radius and CSS Box-shadow.">
+    <link rel="canonical" href="https://css-tools.com">
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="./styles/global.css">
     <link rel="stylesheet" href="./styles/index.css">    
-    <title>CSS TOOLS</title>
 </head>
 <body>
     <div class="sidemenu">
-
+        <ul>
+            <li>
+                <a href="https://css-tools.com/" title="Home" class="active">Home</a>
+            </li>
+            <li>
+                <a href="border-radius-generator" title="Border Radius Generator">Border Radius Generator</a>
+            </li>
+            <li>
+                <a href="box-shadow-generator" title="Box Shadow Generator">Box Shadow Generator</a>
+            </li>
+            <li>
+                <a href="text-shadow-generator" title="Text Shadow Generator">Text Shadow Generator</a>
+            </li>
+            <li>
+                <a href="privacy-policy" title="privacy policies">Privacy Policy</a>
+            </li>
+        </ul>
     </div>
     <header class="header">
         <div class="header__logo">
-            <h3>CSS TOOLS</h3>
+            <h3 onclick="goToHome()" title="CSS-TOOLS logo">CSS TOOLS</h3>
         </div>
-        <div class="header__menu">
+        <div class="header__menu" title="side menu">
             <span>Tools List</span>
             <i class="material-icons">menu</i>
         </div>
@@ -25,18 +60,18 @@
     <main class="main">
         <div class="main__cta">
             <div class="main__text">
-                <h1 class="main__animate-text">FREE SERVICES TO MAKE YOU CODE FASTER!</h1>
+                <h1 class="main__animate-text" title="CSS-TOOlS main heading">FREE SERVICES TO MAKE YOU CODE FASTER!</h1>
                 <h3 class="main__animate-text">80% of your hard work can be done with 20% of effort.
                     That’s why we’re here!
                 </h3>
             </div>
             <div class="main__buttons">
-                <a href="#" class="basic--button main__primary_button main__animate-button">BORDER RADIUS GENERATOR</a>
-                <a href="#" class="basic--button main__secondary_button main__animate-button">MORE TOOLS</a>
+                <a href="/border-radius-generator.html" class="basic--button main__primary_button main__animate-button">BORDER RADIUS GENERATOR</a>
+                <a href="#" class="basic--button main__secondary_button main__animate-button">LEARN CSS WITH THESE COURSES</a>
             </div>
         </div>
         <div class="main__image main__animate-image">
-            <img src="./images/landing.svg" alt="landing page image">
+            <img src="./images/landing.svg" alt="landing page image" title="CSS-TOOLS main page svg image">
         </div>
     </main>
     <section class="showcase">
@@ -56,13 +91,13 @@
             <div class="showcase__text">
                 <h2>Try it now, it is easy.</h2>
                 <h3>Check out the Box Shadow Generator.</h3>
-                <a href="#" class="basic--button main__primary_button">BOX SHADOW GENERATOR</a>
+                <a href="/box-shadow-generator.html" class="basic--button main__primary_button" title="css-tools box shadow generator link">BOX SHADOW GENERATOR</a>
             </div>
         </div>
         <div class="showcase__merchant animate--third">
             <div class="showcase__text">
-                <h2>Check all tools.</h2>
-                <a href="#" class="basic--button main__secondary_button">MORE TOOLS</a>
+                <h2>Want to learn Web Development?</h2>
+                <a href="#" class="basic--button main__secondary_button" title="sponsored courses">SPONSORED COURSES</a>
             </div>
             <div class="showcase__image">
                 <img src="./images/proud.svg" alt="skating page image">
@@ -102,11 +137,10 @@
 
     <footer class="footer">
         <div class="footer__links">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Contact</a>
+            <a href="privacy-policy" title="privacy policy">Privacy Policy</a>
         </div>
         <div class="footer__social">
-            <a href="https://github.com/PatrickPontes44" target="_blank" class="footer__github"><img src="./images/github.svg" alt="github button"></a>
+            <a href="https://github.com/PatrickPontes44" target="_blank" class="footer__github" title="link to github"><img src="./images/github.svg" alt="github button"></a>
             <span class="footer__logo">CSS TOOLS</span>
         </div>
 

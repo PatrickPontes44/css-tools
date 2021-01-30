@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/global.css">
+    <link rel="stylesheet" href="./styles/text-shadow.css">    
+    <title>Text Shadow Generator - CSS TOOLS</title>
+</head>
+<body>
+    <div class="sidemenu">
+        <ul>
+            <li>
+                <a href="https://css-tools.com/" title="Home">Home</a>
+            </li>
+            <li>
+                <a href="border-radius-generator" title="Border Radius Generator">Border Radius Generator</a>
+            </li>
+            <li>
+                <a href="box-shadow-generator" title="Box Shadow Generator">Box Shadow Generator</a>
+            </li>
+            <li>
+                <a href="text-shadow-generator" title="Text Shadow Generator" class="active">Text Shadow Generator</a>
+            </li>
+            <li>
+                <a href="privacy-policy" title="privacy policies">Privacy Policy</a>
+            </li>
+        </ul>
+    </div>
+    <header class="header">
+        <div class="header__logo">
+            <h3 onclick="goToHome()">CSS TOOLS</h3>
+        </div>
+        <div class="header__menu">
+            <span>Tools List</span>
+            <i class="material-icons">menu</i>
+        </div>
+    </header>
+
+    <main class="main">
+        <h1>Text Shadow Generator</h1>
+        <div class="text-shadow-generator-container">
+            <div class="app-container">
+                <div class="output">
+                    <input type="text" id="output-display" value="0px 0px 0px 0px rbga(0,0,0,0)" disabled></input>
+                    <button class="btn" onclick="copyClipboard()">Copy</button>
+                </div>
+                <h2 id="main-text">CSS TOOLS</h2>
+            </div>
+
+            <div class="controls">
+                <span id="horizontal">Text Shadow Horizontal Axis (x): </span>
+                <input type="range" min="-200" max="200" value="3" id="slider-horizontal" class="slider" oninput="moveHorizontal(event)">
+                <span id="vertical">Text Shadow Vertical Axis (y): </span>
+                <input type="range" min="-200" max="200" value="1" id="slider-vertical" class="slider" oninput="moveVertical(event)">
+                <span id="blur">Text Shadow Blur: </span>
+                <input type="range" min="0" max="100" value="0" id="slider-blur" class="slider" oninput="moveBlur(event)">
+                <span id="opacity">Shadow Opacity: </span>
+                <input type="range" min="0" max="1" value="1" step="0.01" id="slider-opacity" class="slider" oninput="moveOpacity(event)">
+                <div class="color-input">
+                    <span>Shadow Color</span>
+                    <input type="color" value="#000000" id="input-color" oninput="moveColor(event)">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section class="about-feature-section">
+        <div class="content">
+            <div class="feature-title">
+                <h2 class="feature__header">What is the CSS Text-Shadow Property and How it Works?</h2>
+                <p>
+                    <strong>Text Shadow</strong> is a CSS property that allows you to add shadows to a <strong>text</strong> element.
+                    The shadow effect is added by changing the following values: <strong> offset-x, offset-y,
+                    blur-radius, and color</strong>.
+                    You are not limited to just adding one shadow. You can add more than one, to do this just separate your shadows with a comma.
+                </p>
+            </div>
+
+            <div class="examples">
+                <h3 class="examples__header">Examples</h3>
+                <div class="example">
+                    <p>
+                        <span class="ex-property">text-shadow</span>: offset-x offset-y blur-radius color;
+                    </p>
+                    <span class="ex-comment">/* or */</span>
+                    <p>
+                        <span class="ex-property">text-shadow</span>: 5px 5px 5px rgba(114,114,114);
+                    </p>
+                    <span class="ex-comment">/* the result will be a text with the offset-x, offset-y, blur-radius, defined
+                         as 5px (five pixels) and the color as medium gray with an opacity of 1 (one). */</span>
+                    <span class="text-ex-1">TEXT SHADOW</span>
+                    <span class="ex-comment">/* or you can do */</span>
+                    <p>
+                        <span class="ex-property">box-shadow</span>: 0px 0px 10px rgba(196, 21, 143, 0.9);
+                    </p>
+                    <span class="ex-comment">/* the result will be a text with offset-x of 0px, offset-y of 0px, blur-radius of 10px,
+                        and pink/violet as shadow color with opacity of 0.9 */</span>
+                    <span class="text-ex-2">TEXT SHADOW</span>
+    
+                    <p>
+                        <br>
+                        <span class="ex-property">box-shadow</span>: -5px 5px 10px rgba(95, 0, 0, 0.7), 5px 1px 10px rgba(53, 233, 9, 0.7);<br>
+                    </p>
+                    <span class="text-ex-3">TEXT SHADOW</span><br>
+                    <span class="ex-comment">/* will result in a text with the left side with a darker red shadow and the right side with a medium green shadow. */</span>
+    
+                    <p class="reference">For more examples please visit: <br> 
+                        <a href="https://www.w3schools.com/cssref/css3_pr_text-shadow.asp">W3Schools CSS3 Text-Shadow</a> <br>
+                        <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/text-shadow">MDN Text-Shadow</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__links">
+            <a href="privacy-policy">Privacy Policy</a>
+        </div>
+        <div class="footer__social">
+            <a href="https://github.com/PatrickPontes44" target="_blank" class="footer__github"><img src="./images/github.svg" alt="github button"></a>
+            <span class="footer__logo">CSS TOOLS</span>
+        </div>
+
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+    <script src="./js/events.js"></script>
+    <script src="./js/text-shadow.js"></script>
+</body>
+</html>
